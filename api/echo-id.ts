@@ -4,7 +4,7 @@ type QueryParams = {
   id: string;
 };
 
-export default async function handler(req: VercelRequest, res: VercelResponse){
+export default function handler(req: VercelRequest, res: VercelResponse){
   const { query } = req;
   if (!_isValidVercelRequest(query)) {
     res.json({ error: "error" });
