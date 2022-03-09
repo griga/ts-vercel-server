@@ -1,4 +1,4 @@
-import type { NextFetchEvent, NextRequest } from "next/server";
+import { NextFetchEvent, NextRequest, NextResponse,  } from "next/server";
 
 export default function middleware(
   request: NextRequest,
@@ -8,5 +8,5 @@ export default function middleware(
   console.log(JSON.stringify(request.ip));
   console.log(JSON.stringify(request.ua));
   console.log(JSON.stringify(request.headers));
-  return new Response("Hello, world!");
+  return NextResponse.next()
 }

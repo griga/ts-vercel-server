@@ -11,6 +11,7 @@ export default function handler(req: VercelRequest, res: VercelResponse){
     return;
   }
   const { id } = query;
+  console.log('in function', id);
   res.json({ id });
 };
 
