@@ -107,4 +107,4 @@ dist
 .vercel
 
 
-tmp
+tmp/
