@@ -8,5 +8,7 @@ export default function middleware(
   console.log(JSON.stringify(request.ip));
   console.log(JSON.stringify(request.ua));
   console.log(JSON.stringify(request.headers));
-  return NextResponse.next()
+  return NextResponse.json({
+    message: 'success'
+  })
 }
